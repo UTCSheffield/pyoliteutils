@@ -1,4 +1,5 @@
 import setuptools
+import versioneer
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -7,7 +8,8 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="pyoliteutils",
-    version="0.0.1",
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     author="Marty Eggleton @ UTC Sheffield OLP",
     author_email="meggleton@utcsheffield.org.uk",
     description="Utils for making pyolite easier to use inside MS Teams notebooks.",

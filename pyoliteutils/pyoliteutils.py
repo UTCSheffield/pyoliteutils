@@ -19,3 +19,7 @@ async def load_file_into_in_mem_filesystem(url, fn=None):
     open(fn, "wb").write(bytes(buffer.valueOf().to_py()))
  
     return fn
+
+async def get_file_from_url(url, fn=None):
+    fn2 = await load_file_into_in_mem_filesystem(url, fn) 
+    return fn2

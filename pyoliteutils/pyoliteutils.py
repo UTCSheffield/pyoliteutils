@@ -19,9 +19,3 @@ async def load_file_into_in_mem_filesystem(url, fn=None):
     open(fn, "wb").write(bytes(buffer.valueOf().to_py()))
  
     return fn
-
-def mm(graph):
-    graphbytes = graph.encode("utf8")
-    base64_bytes = base64.b64encode(graphbytes)
-    base64_string = base64_bytes.decode("ascii")
-    display(Image(url="https://mermaid.ink/img/" + base64_string))

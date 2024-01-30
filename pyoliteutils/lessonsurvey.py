@@ -1,5 +1,4 @@
 from urllib.parse import urlencode
-import json
 import pandas as pd
 from js import fetch
 

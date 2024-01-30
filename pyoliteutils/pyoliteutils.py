@@ -1,7 +1,4 @@
 from js import fetch
-import base64
-from IPython.display import Image, display
-import matplotlib.pyplot as plt
  
 async def load_file_into_in_mem_filesystem(url, fn=None):
     """Load a file from a URL into an in-memory filesystem."""

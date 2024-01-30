@@ -23,7 +23,7 @@ class lessonsurvey():
 
     async def show(self, question=None):
         ANSWERSSURL = self.BASEURL + "answers"
-        res = await fetch(ANSWERSSURL = self.BASEURL + "answers")
+        res = await fetch(ANSWERSSURL)
         text = await res.text()
         data = pd.read_json(text)
         return data

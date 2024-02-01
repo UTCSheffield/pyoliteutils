@@ -7,3 +7,6 @@ def mm(graph):
     base64_bytes = base64.b64encode(graphbytes)
     base64_string = base64_bytes.decode("ascii")
     display(Image(url="https://mermaid.ink/img/" + base64_string))
+
+def mermaid(graph):
+    mm(graph)

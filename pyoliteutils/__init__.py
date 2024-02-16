@@ -6,3 +6,9 @@ from .wordcloud import wordcloud
 
 from . import _version
 __version__ = _version.get_versions()['version']
+
+def pyoliteutilsinfo():
+    import pyolite
+    import pyodide
+    
+    print("pyoliteutils=", __version__, "pyodide=", pyodide.__version__, "pyolite=", pyolite.__version__)

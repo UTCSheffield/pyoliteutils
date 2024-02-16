@@ -8,5 +8,3 @@ def mm(graph):
     base64_string = base64_bytes.decode("ascii")
     display(Image(url="https://mermaid.ink/img/" + base64_string))
 
-def mermaid(graph):
-    mm(graph)

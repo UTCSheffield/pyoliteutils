@@ -1,6 +1,8 @@
 from urllib.parse import urlencode
 import pandas as pd
-from js import fetch
+
+#from js import fetch
+from .pyoliteutils import * 
 
 class lessonsurvey():
     BASEURL = "https://utc-olp-api-proxy.glitch.me/lessonsurvey/"#answer"
@@ -22,6 +24,7 @@ class lessonsurvey():
 
     async def show(self, question=None):
         ANSWERSSURL = self.BASEURL + "answers"
+
         res = await fetch(ANSWERSSURL)
         text = await res.text()
         data = pd.read_json(text)

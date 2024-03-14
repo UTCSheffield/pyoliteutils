@@ -1,8 +1,15 @@
 from . import _version
-import pyolite
-import pyodide
-
 __version__ = _version.get_versions()['version']
 
+try:
+    import pyolite
+    import pyodide
+except Exception:
+    pass
+
 def pyoliteutilsinfo():
-    print("pyoliteutils=", __version__, "pyodide=", pyodide.__version__, "pyolite=", pyolite.__version__)
+    try:
+        print("pyoliteutils=", __version__, "pyodide=", pyodide.__version__, "pyolite=", pyolite.__version__)
+    except Exception:
+        print("pyoliteutils=", __version__)
+
